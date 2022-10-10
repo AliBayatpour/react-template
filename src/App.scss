@@ -1,0 +1,21 @@
+@use "./styles/grid";
+@use "./styles/fonts";
+
+* {
+  box-sizing: border-box;
+  font-family: "InterRegular";
+  margin: 0;
+  padding: 0;
+}
+
+// * setting up color theme for the app
+:root {
+  --color-primary: #007bff;
+  --color-secondary: #6f00ff;
+  --color-danger-100: rgba(255, 0, 38, 0.3);
+  --color-danger-500: rgb(255, 0, 38);
+  --color-success-500: rgb(0, 226, 0);
+  --color-warn: rgb(255, 187, 0);
+  --color-black: #000000;
+  --color-white: #ffffff;
+}
