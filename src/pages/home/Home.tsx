@@ -1,4 +1,5 @@
 import React from "react";
+import Input from "../../components/shared/input/Input";
 import useInput from "../../hooks/use-input";
 import styles from "./home.module.scss";
 
@@ -38,23 +39,21 @@ const Home: React.FC = () => {
   };
 
   const nameInputclasses = nameHasError ? styles["formControl--invalid"] : null;
-  const emailInputclasses = emailHasError
+  const emailInputClasses = emailHasError
     ? styles["formControl--invalid"]
     : null;
   return (
     <div className="container">
       <form onSubmit={formSubmissionHandler}>
-        <div className={`${styles.formControl} ${nameInputclasses}`}>
-          <label htmlFor="name">Name:</label>
-          <input
-            type="text"
-            id="name"
-            value={enteredName}
-            onBlur={nameBlurHandler}
-            onChange={nameChangeHandler}
-          />
-        </div>
-        <div className={`${styles.formControl} ${emailInputclasses}`}>
+        <Input
+          type="text"
+          id="name"
+          classes={nameInputclasses}
+          value={enteredName}
+          onBlur={nameBlurHandler}
+          onChange={nameChangeHandler}
+        />
+        <div className={`${styles.formControl} ${emailInputClasses}`}>
           <label htmlFor="email">Email:</label>
           <input
             type="text"

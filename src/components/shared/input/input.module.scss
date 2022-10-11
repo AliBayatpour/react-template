@@ -1,0 +1,15 @@
+.formControl {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 300px;
+  &--invalid {
+    input {
+      background-color: var(--color-danger-100);
+    }
+  }
+}
+
+.errorText {
+  color: var(--color-danger-500);
+}
