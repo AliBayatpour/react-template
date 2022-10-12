@@ -3,6 +3,7 @@
   justify-content: center;
   flex-direction: column;
   max-width: 300px;
+  margin: 16px 0;
   &--invalid {
     input {
       background-color: var(--color-danger-100);

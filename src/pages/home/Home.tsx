@@ -38,34 +38,28 @@ const Home: React.FC = () => {
     resetEmailInput();
   };
 
-  const nameInputclasses = nameHasError ? styles["formControl--invalid"] : null;
-  const emailInputClasses = emailHasError
-    ? styles["formControl--invalid"]
-    : null;
   return (
     <div className="container">
       <form onSubmit={formSubmissionHandler}>
         <Input
           type="text"
           id="name"
-          classes={nameInputclasses}
+          name="Name"
           value={enteredName}
           onBlur={nameBlurHandler}
           onChange={nameChangeHandler}
+          hasError={nameHasError}
         />
-        <div className={`${styles.formControl} ${emailInputClasses}`}>
-          <label htmlFor="email">Email:</label>
-          <input
-            type="text"
-            id="email"
-            value={enteredEmail}
-            onBlur={emailBlurHandler}
-            onChange={emailChangeHandler}
-          />
-          {emailHasError && (
-            <p className={styles.errorText}>Email is not valid</p>
-          )}
-        </div>
+        <Input
+          type="text"
+          id="email"
+          name="Email"
+          value={enteredEmail}
+          onBlur={emailBlurHandler}
+          onChange={emailChangeHandler}
+          hasError={emailHasError}
+        />
+
         <button
           className={`${styles["submitBut"]} ${
             !formIsValid && styles["submitBut--disabled"]
