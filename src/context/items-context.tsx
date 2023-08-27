@@ -23,6 +23,14 @@ export const ItemContextProvider: React.FC<Props> = ({ children }) => {
   const onSetItems = (items: IItem[]) => {
     setItems(items);
   };
+  // const onfetch = () => {
+  //   const items = await get()
+  //   onSetItems(items)
+  // }
+  // const onUpdateItem = async () => {
+  //   await put(URL);
+  //   onfetch()
+  // }
 
   const contextValue = {
     items,
